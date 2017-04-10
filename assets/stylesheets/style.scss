@@ -1,0 +1,222 @@
+@import "_bootstrap-variables.sass";
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,700');
+@import url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,700|Philosopher:400,700|Playfair+Display:400,700,900&subset=cyrillic,cyrillic-ext');
+
+$yellow: #F8E70D;
+$blue: #30D1E5;
+$diameter: 100px;
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	font-family: $headings-font-family;
+}
+a:focus{
+	text-decoration: none;
+	outline-style: none;
+}
+body{
+	// background: #D9F6F9;
+}
+.ba-container{
+	margin: 0 auto;
+	max-width: 1240px;
+	padding: 0 20px;
+	&--header{
+		background: url(../images/vul.png) 95% 100% no-repeat;
+		padding-bottom: 200px;
+	}
+}
+/* main{
+	padding: 400px 0;
+} */
+.ba-header{
+	background: url(../images/bg.jpg) 50% 70% no-repeat;
+	background-size: cover;
+	text-align: center;
+	padding: 20px 0 0px;
+	position: relative;
+	color: $text-color;
+}
+.ba-top-navbar{
+	// padding-top: 20px;
+}
+.ba-main-menu{
+
+	li{
+		border-radius: 25px;
+		background: rgba(255,255,255, .4);
+		&:hover, &:focus, &.active{
+			background: $yellow;
+			a{
+				color: $brand-primary;
+			}
+		}
+		a{
+			font-family: $font-family-base;
+			color: $text-color;
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: 18px;
+
+			&:hover, &:focus, &.active{
+
+			}
+		}
+	}
+}
+.navbar-brand{
+	margin-bottom: 75px;
+	&:hover{
+		svg{
+			.cls-1 {
+				fill: $brand-primary;
+				transition: fill .4s ease-in;
+			}
+		}
+	}
+}
+.navbar-toggle{
+	padding: 0;
+	&:hover{
+		.icon-bar{
+			background: $brand-primary;
+		}
+	}
+	.icon-bar{
+		width: 50px;
+		height: 3px;
+		background: $text-color;
+		& + .icon-bar{
+			margin-top: 10px;
+		}
+	}
+
+}
+
+
+// Sections
+
+.ba-title{
+	text-align: center;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+	// color: $brand-primary;
+}
+.ba-about{
+	padding: 70px 0;
+	&__projects{
+		margin: 50px 0;
+		text-align: center;
+		font-size: 0;
+	}
+	&__project{
+		display: inline-block;
+		width: 400px;
+		padding: 0 20px;
+		margin-bottom: 30px;
+		vertical-align: top;
+		font-size: 18px;
+	}
+	&__img{
+		height: $diameter;
+		width: $diameter;
+		display: inline-block;
+		background: url(../images/hexagon.svg) 50% no-repeat;
+		background-size: contain;
+		padding: 25px;
+	}
+	&__icon{
+		width: 100%;
+		height: 100%;
+		display: block;
+		background: 50% no-repeat;
+		background-size: contain;
+		&--art{
+			background-image: url(../images/icon/art.svg);
+		}
+		&--master{
+			background-image: url(../images/icon/master.svg);
+		}
+		&--eco{
+			background-image: url(../images/icon/tree2.svg);
+		}
+		&--trip{
+			background-image: url(../images/icon/compass.svg);
+		}
+		&--museum{
+			background-image: url(../images/icon/museum.svg);
+		}
+		&--polt{
+			background-image: url(../images/icon/castle.svg);
+		}
+		&--theater{
+			background-image: url(../images/icon/theater.svg);
+		}
+		&--quest{
+			background-image: url(../images/icon/quest.svg);
+		}
+		&--stress{
+			background-image: url(../images/icon/fun.svg);
+		}
+		&--training{
+			background-image: url(../images/icon/people.svg);
+		}
+		&--sport{
+			background-image: url(../images/icon/athlete.svg);
+		}
+		&--children{
+			background-image: url(../images/icon/children.svg);
+		}
+		&--movie{
+			background-image: url(../images/icon/movie.svg);
+		}
+		&--christmas{
+			background-image: url(../images/icon/christmas.svg);
+		}
+
+	}
+	&__subtitle{
+		text-transform: uppercase;
+		margin: 20px 0;
+	}
+}
+.ba-row{
+	margin: 30px 0;
+}
+.breadcrumb{
+	margin: 0;
+	li{
+		text-transform: uppercase;
+		font: 700 14px/1 $headings-font-family;
+		& + li:before{
+			padding: 0;
+		}
+		a{
+			color: $text-color;
+			text-decoration: none;
+			&:hover{
+				color: #fff;
+			}
+		}
+	}
+}
+
+/* ----- Footer ----- */
+
+.ba-footer{
+	padding: 50px 0;
+	background: $blue;
+	margin-top: 300px;
+}
+
+
+@import "slick";
+// @import "pages/blog.scss";
+// @import "pages/about.scss";
+
